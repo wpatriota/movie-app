@@ -28,9 +28,10 @@ class desenvolvedorController extends Controller
      */
     public function index()
 {
-        $desenvolvedores = Desenvolvedor::all();
+        //$desenvolvedores = Desenvolvedor::all();
         
-        return view('index',compact('desenvolvedores'));
+        //return view('index',compact('desenvolvedores'));
+        //return response($desenvolvedores, 200);
 }
 
     /**

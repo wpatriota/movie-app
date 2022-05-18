@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('desenvolvedors', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->integer('nivel');
             $table->string('nome');
             $table->char('sexo');
@@ -33,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('desenvolvedores');
+        Schema::dropIfExists('desenvolvedors');
     }
 };

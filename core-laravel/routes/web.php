@@ -17,6 +17,33 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Desenvolvedores
+Route::get('/CreateDesenvolvedor', function () {
+    return view('welcome');
+});
 
-Route::resource('desenvolvedores', 'desenvolvedorController');
-Route::resource('niveis', 'nivelController');
+Route::get('/UpdateDesenvolvedor/{id}', function () {
+    return view('welcome');
+});
+
+
+Route::get('/DeleteDesenvolvedor', function () {
+    return view('welcome');
+});
+
+//Niveis
+Route::get('/CreateNivel', function () {
+    return view('welcome');
+});
+
+Route::get('/UpdateNivel', function () {
+    return view('welcome');
+});
+
+Route::get('/UpdateNivel', function () {
+    return view('welcome');
+});
+
+Route::get('/DeleteNivel', function () {
+    return view('welcome');
+});

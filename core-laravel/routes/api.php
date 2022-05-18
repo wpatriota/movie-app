@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+//use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/*Route::controller(ApiController::class)->group(function () {
+    Route::prefix('api')->group(function () {
+        Route::get('desenvolvedores', 'getAllDesenvolvedores')->name('desenvolvedores');
+    });
+    //Route::get('/api/desenvolvedores', 'getAllDesenvolvedores');
+    //Route::post('/orders', 'store');
+});*/
+
+Route::get('desenvolvedores', 'ApiController@getAllDesenvolvedores');
+Route::get('desenvolvedor/{id}', 'ApiController@getDesenvolvedor');
+Route::post('desenvolvedor', 'ApiController@createDesenvolvedor');
+Route::put('desenvolvedor/{id}', 'ApiController@updateDesenvolvedor');
+Route::delete('desenvolvedor/{id}','ApiController@deleteDesenvolvedor');
+
+
+Route::get('niveis', 'ApiController@getAllNiveis');
+Route::get('nivel/{id}', 'ApiController@getNivel');
+Route::post('nivel', 'ApiController@createNivel');
+Route::put('nivel/{id}', 'ApiController@updateNivel');
+Route::delete('nivel/{id}','ApiController@deleteNivel');
