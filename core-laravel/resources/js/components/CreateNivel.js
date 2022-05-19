@@ -6,14 +6,13 @@ import MyGlobleSetting from './MyGlobleSetting';
 
 class CreateNivel extends React.Component{
 
-    constructor() {
-      super();
-      //this.state = {title: '', body: ''};
+    constructor(props) {
+      super(props);
+      this.state = {nivel: ''};
       /*this.state = {
         allQuotes: [],
       };*/
       this.handleChange1 = this.handleChange1.bind(this);
-      this.handleChange2 = this.handleChange2.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }  
   handleChange1(e){
@@ -22,20 +21,14 @@ class CreateNivel extends React.Component{
     })
     };
 
-  handleChange2(e){
-    this.setState({
-      productBody: e.target.value
-    });
-  };
   handleSubmit(e){
     e.preventDefault();
-    const desenvolvedores = {
-      title: this.state.productTitle,
-      body: this.state.productBody
+    const nivel = {
+      title: this.state.nivel
     }
-    let uri = MyGlobleSetting.url + '/api/niveis';
-    axios.post(uri, niveis).then((response) => {
-      browserRouter('/display-item');
+    let uri = MyGlobleSetting.url + '/api/api_createNivel';
+    axios.post(uri, nivel).then((response) => {
+      browserRouter('/DisplayNivel');
     });
   };
 
@@ -48,21 +41,14 @@ class CreateNivel extends React.Component{
           <div className="row">
             <div className="col-md-6">
               <div className="form-group">
-                <label>Product Title:</label>
+                <label>Nivel:</label>
                 <input type="text" className="form-control" onChange={this.handleChange1} />
               </div>
             </div>
             </div>
-            <div className="row">
-              <div className="col-md-6">
-                <div className="form-group">
-                  <label>Product Body:</label>
-                  <textarea className="form-control col-md-6" onChange={this.handleChange2}></textarea>
-                </div>
-              </div>
-            </div><br />
+            <br />
             <div className="form-group">
-              <button className="btn btn-primary">Add Product</button>
+              <button className="btn btn-primary">Incluir nível</button>
             </div>
         </form>
   </div>

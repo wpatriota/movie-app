@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import MyGlobleSetting from './MyGlobleSetting';
 
 
@@ -8,14 +8,14 @@ class TableRow extends React.Component {
       super(props);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  
   handleSubmit(event) {
     event.preventDefault();
-    let uri = MyGlobleSetting.url + `/api/api_deleteDesenvolvedor/${this.props.obj.id}`;
-    const history = useNavigate();
-
+    let uri = MyGlobleSetting.url + `/api/api_deleteDesenvolvedor/${this.props.params.id}`;
     axios.delete(uri);
-      history('/DisplayDesenvolvedor');
   }
+
   render() {
     //const desenvolvedor = this.props.desenvolvedor;
     return (
@@ -37,7 +37,7 @@ class TableRow extends React.Component {
           </td>
           <td>
           <form onSubmit={this.handleSubmit}>
-            <Link to={"updateDesenvolvedor/"+this.props.desenvolvedor.id} className="btn btn-primary">Editar</Link>
+            <Link to={"/updateDesenvolvedor/"+this.props.desenvolvedor.id} className="btn btn-primary">Editar</Link>
             <input type="submit" value="Delete" className="btn btn-danger"/>
          </form>
           </td>

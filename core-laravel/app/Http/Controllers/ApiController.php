@@ -24,7 +24,7 @@ class ApiController extends Controller
         $desenvolvedor->hobby = $request->hobby;
         $desenvolvedor->save();
 
-        return response90->json('Desenvolvedor criado com sucesso');
+        return response()->json('Desenvolvedor criado com sucesso');
       }
   
       public function api_getDesenvolvedor($id) {

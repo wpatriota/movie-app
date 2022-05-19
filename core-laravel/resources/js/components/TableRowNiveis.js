@@ -4,32 +4,32 @@ import MyGlobleSetting from './MyGlobleSetting';
 
 
 class TableRowNiveis extends React.Component {
-  constructor() {
-      super();
+  constructor(props) {
+      super(props);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(event) {
     event.preventDefault();
-    let uri = MyGlobleSetting.url + `/api/api_getAllNiveis/${this.props.obj.id}`;
+    let uri = MyGlobleSetting.url + `/api/api_deleteNivel/${this.props.nivel.id}`;
     const history = useNavigate();
 
     axios.delete(uri);
-      history('/display-item');
+      history('/DisplayNivel');
   }
   render() {
-    const nivel = this.props.nivel;
+    //const nivel = this.props.nivel;
     return (
         <tr>
           <td>
-            {nivel.id}
+            {this.props.nivel.id}
           </td>
           <td>
-            {nivel.nivel}
+            {this.props.nivel.nivel}
           </td>          
           <td>
           <form onSubmit={this.handleSubmit}>
-            <Link to={"updateNivel/"+nivel.id} className="btn btn-primary">Editar</Link>
-            <Link to={"deleteNivel/"+nivel.id} className="btn btn-danger">Excluir</Link>
+            <Link to={"/updateNivel/"+this.props.nivel.id} className="btn btn-primary">Editar</Link>
+            <input type="submit" value="Delete" className="btn btn-danger"/>
          </form>
           </td>
         </tr>

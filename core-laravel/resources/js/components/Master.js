@@ -1,10 +1,33 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes , HashRouter} from "react-router-dom";
 
+import CreateDesenvolvedor from './CreateDesenvolvedor';
+import DisplayDesenvolvedor from './DisplayDesenvolvedor';
+import UpdateDesenvolvedor from './UpdateDesenvolvedor';
+
+import DisplayNivel from './DisplayNivel';
+import CreateNivel from './DisplayNivel';
+import UpdateNivel from './UpdateNivel';
+
+const routes = (
+  <Routes>
+      <Route exact path="/" element={<DisplayDesenvolvedor />}/>
+      
+      <Route path="/CreateDesenvolvedor" element={<CreateDesenvolvedor />}/>
+      <Route path="/UpdateDesenvolvedor/:id" element={<UpdateDesenvolvedor />}></Route>
+      <Route path="/DeleteDesenvolvedor/:id" />
+
+      <Route path="/DisplayNivel" element={<DisplayNivel />}/>
+      <Route path="/UpdateNivel/:id" element={<UpdateNivel />}/>
+      <Route path="/CreateNivel" element={<CreateNivel/>}/>
+      
+  </Routes>
+);
 
 class Master extends React.Component {
   render(){
     return (
+      <HashRouter>
       <div className="container">
         <nav className="navbar navbar-default">
           <div className="container-fluid">
@@ -18,10 +41,12 @@ class Master extends React.Component {
             </ul>
           </div>
       </nav>
-          <div className='App'>
+          <div className="content">
+              {routes}
               {this.props.children}
           </div>
       </div>
+      </HashRouter>
     );
   }
 }

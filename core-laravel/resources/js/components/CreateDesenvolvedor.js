@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useNavigate, useParams } from "react-router-dom";
 import MyGlobleSetting from './MyGlobleSetting';
 
 class CreateDesenvolvedor extends React.Component{
     constructor(props) {
       super(props);
-      this.state = {nome: '', nivel: '', datanascimento: '',sexo: '',idade: '', hobby: '', };
+
+      let navigate = useNavigate();
+      let {id} = useParams();
+      this.state = {nome: '', nivel: '', datanascimento: '',sexo: '',idade: '', hobby: '' };
       this.handleChange1 = this.handleChange1.bind(this);
       this.handleChange2 = this.handleChange2.bind(this);
       this.handleChange3 = this.handleChange3.bind(this);
@@ -56,9 +59,10 @@ class CreateDesenvolvedor extends React.Component{
       idade: this.state.idade
     }
 
-    let uri = MyGlobleSetting.url + '/api/createDesenvolvedor';
+    let uri = MyGlobleSetting.url + '/api/api_createDesenvolvedor';
     axios.post(uri, desenvolvedor).then((response) => {
-      BrowserRouter('/displayDesenvolvedores');
+      //BrowserRouter('/');
+      <Redirect push to="/" />
     });
   };
 

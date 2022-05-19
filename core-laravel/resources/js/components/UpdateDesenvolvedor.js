@@ -1,17 +1,27 @@
 import React, {Component} from 'react';
-import { BrowserRouter } from "react-router-dom";
-import MyGlobleSetting from './MyGlobleSetting';
-import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams, BrowserRouter } from 'react-router-dom';
+//import { withRouter } from "react-router";
+
+
+import MyGlobleSetting from './MyGlobleSetting';
+import CreateDesenvolvedor from './CreateDesenvolvedor';
+import DisplayDesenvolvedor from './DisplayDesenvolvedor';
+
+function withRouter(Component) {
+  function ComponentWithRouter(props) {
+    let params = useParams()
+    return <Component params={params} />
+  }
+  return ComponentWithRouter
+}
 
 class UpdateDesenvolvedor extends React.Component{
-  
+    
     constructor(props) {
       super(props);
-
-      this.state = {id: ''};
-
+      this.state={id : "", nome: "", nivel: "", datanascimento: "", sexo: "", hobby: "", idade: "", desenvolvedor: []};
       this.handleChange1 = this.handleChange1.bind(this);
       this.handleChange2 = this.handleChange2.bind(this);
       this.handleChange3 = this.handleChange3.bind(this);
@@ -22,60 +32,15 @@ class UpdateDesenvolvedor extends React.Component{
   }  
   
   componentDidMount(){
-    if(this.props?.match?.params?.id){
-      let id = this.props.match.params.id
-      console.log('entrou params');
-      
-      axios.get(MyGlobleSetting.url + `/api/api_getDesenvolvedor/${id}`)
+    axios.get(MyGlobleSetting.url + `/api/api_getDesenvolvedor/${this.props.params.id}`)
       .then(response => {
         this.setState({ desenvolvedor: response.data });
-        console.log(this.state);
       })
     .catch(function (error) {
       console.log(error);
     })
-    }else{
-      console.log('nao tem id params');
-      if(this.props?.match?.obj?.id){
-        let id = this.props.match.params.id
-        console.log('entrou obj');
-        
-        axios.get(MyGlobleSetting.url + `/api/api_getDesenvolvedor/${id}`)
-        .then(response => {
-          this.setState({ desenvolvedor: response.data });
-          console.log(this.state);
-        })
-      .catch(function (error) {
-        console.log(error);
-      })
-      }else{
-        console.log('nao tem id obj');
-      }
-
-      //let uri = MyGlobleSetting.url + `/api/desenvolvedores/${this.props.obj.id}`;
-      //console.log(uri);
-    }
   }
-  
-  pegaId(){
-    if(this.props?.match?.params?.id){
-      let id = this.props.match.params.id
 
-      this.setState({ id: id });
-      console.log(this.state);
-    }else{
-      console.log('nao tem id params');
-      if(this.props?.match?.obj?.id){
-        let id = this.props.match.params.id
-
-        this.setState({ id: id });
-        console.log(this.state);
-      }else{
-        console.log('nao tem id obj');
-      }
-    }
-    
-  }
   handleChange1(e){
     this.setState({
       nome: e.target.value
@@ -126,8 +91,9 @@ class UpdateDesenvolvedor extends React.Component{
 
 
     render() {
-      //const desenvolvedor = this.props.desenvolvedor;
-      this.pegaId();
+      const {id} = this.props.params ;
+      //this.setState({id: id});
+      //console.log('id'+this.state);
       return (
       <div>
         <h1>Editar desenvolvedor</h1>
@@ -136,7 +102,7 @@ class UpdateDesenvolvedor extends React.Component{
             <div className="col-md-6">
               <div className="form-group">
                 <label>nome:</label>
-                <input type="text" className="form-control" onChange={this.handleChange1} value={this.state} />
+                <input type="text" className="form-control" onChange={this.handleChange1} value={this.state.desenvolvedor.nome}  />
               </div>
             </div>
             </div>
@@ -144,7 +110,7 @@ class UpdateDesenvolvedor extends React.Component{
               <div className="col-md-6">
                 <div className="form-group">
                   <label>nivel:</label>
-                  <textarea className="form-control col-md-6" onChange={this.handleChange2}></textarea>
+                  <input className="form-control col-md-6" onChange={this.handleChange2} value={this.state.desenvolvedor.nivel}></input>
                 </div>
               </div>
             </div>
@@ -152,7 +118,7 @@ class UpdateDesenvolvedor extends React.Component{
               <div className="col-md-6">
                 <div className="form-group">
                   <label>datanascimento:</label>
-                  <textarea className="form-control col-md-6" onChange={this.handleChange3}></textarea>
+                  <input className="form-control col-md-6" onChange={this.handleChange3} value={this.state.desenvolvedor.datanascimento}></input>
                 </div>
               </div>
             </div>
@@ -160,7 +126,7 @@ class UpdateDesenvolvedor extends React.Component{
               <div className="col-md-6">
                 <div className="form-group">
                   <label>Sexo:</label>
-                  <textarea className="form-control col-md-6" onChange={this.handleChange4}></textarea>
+                  <input className="form-control col-md-6" onChange={this.handleChange4} value={this.state.desenvolvedor.sexo}></input>
                 </div>
               </div>
             </div>
@@ -168,7 +134,7 @@ class UpdateDesenvolvedor extends React.Component{
               <div className="col-md-6">
                 <div className="form-group">
                   <label>Idade:</label>
-                  <textarea className="form-control col-md-6" onChange={this.handleChange5}></textarea>
+                  <input className="form-control col-md-6" onChange={this.handleChange5} value={this.state.desenvolvedor.idade}></input>
                 </div>
               </div>
             </div>
@@ -176,12 +142,12 @@ class UpdateDesenvolvedor extends React.Component{
               <div className="col-md-6">
                 <div className="form-group">
                   <label>Hobby:</label>
-                  <textarea className="form-control col-md-6" onChange={this.handleChange6}></textarea>
+                  <input className="form-control col-md-6" onChange={this.handleChange6} value={this.state.desenvolvedor.hobby}></input>
                 </div>
               </div>
             </div><br />
             <div className="form-group">
-              <button className="btn btn-primary">Add Desenvolvedor</button>
+              <button className="btn btn-primary">Salvar</button>
             </div>
         </form>
   </div>
@@ -189,4 +155,5 @@ class UpdateDesenvolvedor extends React.Component{
     }
 }
 
-export default UpdateDesenvolvedor;
+export default withRouter(UpdateDesenvolvedor);
+//export default UpdateDesenvolvedor;

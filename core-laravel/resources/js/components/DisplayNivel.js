@@ -5,11 +5,11 @@ import TableRowNiveis from './TableRowNiveis';
 import MyGlobleSetting from './MyGlobleSetting';
 
 class DisplayNivel extends React.Component{
-  constructor() {
-       super();
-       //this.props = {value: '', products: ''};
-       
+  constructor(props) {
+       super(props);
+       this.state = {value: '', niveis: ''};       
      }
+
      componentDidMount(){
        axios.get(MyGlobleSetting.url + '/api/api_getAllNiveis')
        .then(response => {
@@ -19,15 +19,15 @@ class DisplayNivel extends React.Component{
          console.log(error);
        })
      }
-     tabRow(){
-       if(this.props.niveis instanceof Array){
-         return this.props.niveis.map(function(object, i){
-             return ;
+     tabRowNiveis(){
+       if(this.state.niveis instanceof Array){
+         return this.state.niveis.map(function(object, i){
+          console.log(object);
+             return <TableRowNiveis key={i} nivel={object} />;
 
          })
        }
      }
-
 
   render(){
     return (
@@ -52,7 +52,7 @@ class DisplayNivel extends React.Component{
             </tr>
             </thead>
             <tbody>
-              {this.tabRow()}
+              {this.tabRowNiveis()}
             </tbody>
         </table>
     </div>

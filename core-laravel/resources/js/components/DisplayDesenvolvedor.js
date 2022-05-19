@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link ,useParams } from 'react-router-dom';
 import TableRow from './TableRow';
 import MyGlobleSetting from './MyGlobleSetting';
+
+function withRouter(Component) {
+  function ComponentWithRouter(props) {
+    let params = useParams()
+    return <Component params={params} />
+  }
+  return ComponentWithRouter
+}
 
 class DisplayDesenvolvedor extends React.Component {
   constructor(props) {
@@ -21,7 +29,6 @@ class DisplayDesenvolvedor extends React.Component {
      tabRow(){
        if(this.state.desenvolvedores instanceof Array){
          return this.state.desenvolvedores.map(function(object, i){
-           console.log(object);
              return <TableRow key={i} desenvolvedor={object} />;
 
          })
@@ -36,9 +43,9 @@ class DisplayDesenvolvedor extends React.Component {
 
 
         <div className="row">
-          <div className="col-md-10"><Link to="/displayNivel">Niveis</Link></div>
+          <div className="col-md-10"><Link to="../displayNivel">Niveis</Link></div>
           <div className="col-md-2">
-            <Link to="/createDesenvolvedor">Incluir Desenvolvedor</Link>
+            <Link to="../createDesenvolvedor">Incluir Desenvolvedor</Link>
           </div>
         </div><br />
 
@@ -62,5 +69,5 @@ class DisplayDesenvolvedor extends React.Component {
     )
   }
 }
-export default DisplayDesenvolvedor;
+export default withRouter(DisplayDesenvolvedor);
 
