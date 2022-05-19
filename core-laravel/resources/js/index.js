@@ -8,9 +8,10 @@ import {
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { BrowserRouter, Switch, useParams} from "react-router-dom";
 
-import App from './components/App';
+import {Switch, useParams} from "react-router-dom";
+
+import Master from './components/Master';
 import CreateDesenvolvedor from './components/CreateDesenvolvedor';
 import DisplayDesenvolvedor from './components/DisplayDesenvolvedor';
 import UpdateDesenvolvedor from './components/UpdateDesenvolvedor';
@@ -19,13 +20,13 @@ import CreateNivel from './components/DisplayNivel';
 
 const routes = (
       <Routes>
-          <Route path="/" element={<DisplayDesenvolvedor />}></Route>
-          <Route path="/CreateDesenvolvedor" element={<CreateDesenvolvedor />}></Route>
-          <Route path="/UpdateDesenvolvedor/:id" element={<UpdateDesenvolvedor />}></Route>
-          <Route path="/DeleteDesenvolvedor/:id" ></Route>
+          <Route path="/" element={<DisplayDesenvolvedor />}/>
+          <Route path="/CreateDesenvolvedor" element={<CreateDesenvolvedor />}/>
+          <Route path="/UpdateDesenvolvedor/:id" element={<UpdateDesenvolvedor />}/>
+          <Route path="/DeleteDesenvolvedor/:id" />
 
-          <Route path="/DisplayNivel" element={<DisplayNivel />}></Route>
-          <Route path="/CreateNivel" element={<CreateNivel/>}></Route>
+          <Route path="/DisplayNivel" element={<DisplayNivel />}/>
+          <Route path="/CreateNivel" element={<CreateNivel/>}/>
           
       </Routes>
 );

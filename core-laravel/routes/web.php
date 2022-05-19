@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*
 //Desenvolvedores
 Route::get('/CreateDesenvolvedor', function () {
     return view('welcome');
@@ -47,3 +48,4 @@ Route::get('/UpdateNivel', function () {
 Route::get('/DeleteNivel', function () {
     return view('welcome');
 });
+*/

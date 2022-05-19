@@ -3,42 +3,42 @@ import { Link, useNavigate } from 'react-router-dom';
 import MyGlobleSetting from './MyGlobleSetting';
 
 
-class TableRow extends Component {
-  constructor() {
-      super();
+class TableRow extends React.Component {
+  constructor(props) {
+      super(props);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(event) {
     event.preventDefault();
-    let uri = MyGlobleSetting.url + `/api/desenvolvedores/${this.props.obj.id}`;
+    let uri = MyGlobleSetting.url + `/api/api_deleteDesenvolvedor/${this.props.obj.id}`;
     const history = useNavigate();
 
     axios.delete(uri);
-      history('/display-item');
+      history('/DisplayDesenvolvedor');
   }
   render() {
-    const desenvolvedor = this.props.desenvolvedor;
+    //const desenvolvedor = this.props.desenvolvedor;
     return (
         <tr>
           <td>
-            {desenvolvedor.id}
+            {this.props.desenvolvedor.id}
           </td>
           <td>
-            {desenvolvedor.nome}
+            {this.props.desenvolvedor.nome}
           </td>
           <td>
-            {desenvolvedor.nivel}
+            {this.props.desenvolvedor.nivel}
           </td>
           <td>
-            {desenvolvedor.sexo}
+            {this.props.desenvolvedor.sexo}
           </td>
           <td>
-            {desenvolvedor.datanascimento}
+            {this.props.desenvolvedor.datanascimento}
           </td>
           <td>
           <form onSubmit={this.handleSubmit}>
-            <Link to={"updateDesenvolvedor/"+desenvolvedor.id} className="btn btn-primary">Editar</Link>
-            <Link to={"deleteDesenvolvedor/"+desenvolvedor.id} className="btn btn-primary">Editar</Link>
+            <Link to={"updateDesenvolvedor/"+this.props.desenvolvedor.id} className="btn btn-primary">Editar</Link>
+            <input type="submit" value="Delete" className="btn btn-danger"/>
          </form>
           </td>
         </tr>

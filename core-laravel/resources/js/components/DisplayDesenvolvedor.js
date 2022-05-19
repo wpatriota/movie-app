@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import TableRow from './TableRow';
 import MyGlobleSetting from './MyGlobleSetting';
 
-class DisplayDesenvolvedor extends Component {
-  constructor() {
-       super();
+class DisplayDesenvolvedor extends React.Component {
+  constructor(props) {
+       super(props);
        this.state = {value: '', desenvolvedores: ''};
      }
      componentDidMount(){
-       axios.get(MyGlobleSetting.url + '/api/desenvolvedores')
+       axios.get(MyGlobleSetting.url + '/api/api_getAllDesenvolvedores')
        .then(response => {
          this.setState({ desenvolvedores: response.data });
        })
@@ -21,6 +21,7 @@ class DisplayDesenvolvedor extends Component {
      tabRow(){
        if(this.state.desenvolvedores instanceof Array){
          return this.state.desenvolvedores.map(function(object, i){
+           console.log(object);
              return <TableRow key={i} desenvolvedor={object} />;
 
          })
@@ -35,7 +36,7 @@ class DisplayDesenvolvedor extends Component {
 
 
         <div className="row">
-          <div className="col-md-10"><Link to="/createDesenvolvedor">Niveis</Link></div>
+          <div className="col-md-10"><Link to="/displayNivel">Niveis</Link></div>
           <div className="col-md-2">
             <Link to="/createDesenvolvedor">Incluir Desenvolvedor</Link>
           </div>

@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 import { BrowserRouter } from "react-router-dom";
 import MyGlobleSetting from './MyGlobleSetting';
+import { useParams } from 'react-router-dom';
 
-class CreateDesenvolvedor extends React.Component{
+import { Link, useNavigate } from 'react-router-dom';
+
+class UpdateDesenvolvedor extends React.Component{
+  
     constructor(props) {
       super(props);
-      this.state = {nome: '', nivel: '', datanascimento: '',sexo: '',idade: '', hobby: '', };
+
+      this.state = {id: ''};
+
       this.handleChange1 = this.handleChange1.bind(this);
       this.handleChange2 = this.handleChange2.bind(this);
       this.handleChange3 = this.handleChange3.bind(this);
@@ -13,16 +19,62 @@ class CreateDesenvolvedor extends React.Component{
       this.handleChange5 = this.handleChange5.bind(this);
       this.handleChange6 = this.handleChange6.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
-      
   }  
+  
   componentDidMount(){
-    axios.get(MyGlobleSetting.url + '/api/desenvolvedor/${id}')
-    .then(response => {
-      this.setState({ desenvolvedor: response.data });
-    })
+    if(this.props?.match?.params?.id){
+      let id = this.props.match.params.id
+      console.log('entrou params');
+      
+      axios.get(MyGlobleSetting.url + `/api/api_getDesenvolvedor/${id}`)
+      .then(response => {
+        this.setState({ desenvolvedor: response.data });
+        console.log(this.state);
+      })
     .catch(function (error) {
       console.log(error);
     })
+    }else{
+      console.log('nao tem id params');
+      if(this.props?.match?.obj?.id){
+        let id = this.props.match.params.id
+        console.log('entrou obj');
+        
+        axios.get(MyGlobleSetting.url + `/api/api_getDesenvolvedor/${id}`)
+        .then(response => {
+          this.setState({ desenvolvedor: response.data });
+          console.log(this.state);
+        })
+      .catch(function (error) {
+        console.log(error);
+      })
+      }else{
+        console.log('nao tem id obj');
+      }
+
+      //let uri = MyGlobleSetting.url + `/api/desenvolvedores/${this.props.obj.id}`;
+      //console.log(uri);
+    }
+  }
+  
+  pegaId(){
+    if(this.props?.match?.params?.id){
+      let id = this.props.match.params.id
+
+      this.setState({ id: id });
+      console.log(this.state);
+    }else{
+      console.log('nao tem id params');
+      if(this.props?.match?.obj?.id){
+        let id = this.props.match.params.id
+
+        this.setState({ id: id });
+        console.log(this.state);
+      }else{
+        console.log('nao tem id obj');
+      }
+    }
+    
   }
   handleChange1(e){
     this.setState({
@@ -66,7 +118,7 @@ class CreateDesenvolvedor extends React.Component{
       idade: this.state.idade
     }
 
-    let uri = MyGlobleSetting.url + '/api/updateDesenvolvedor';
+    let uri = MyGlobleSetting.url + '/api/api_updateDesenvolvedor';
     axios.post(uri, desenvolvedor).then((response) => {
       BrowserRouter('/displayDesenvolvedores');
     });
@@ -74,6 +126,8 @@ class CreateDesenvolvedor extends React.Component{
 
 
     render() {
+      //const desenvolvedor = this.props.desenvolvedor;
+      this.pegaId();
       return (
       <div>
         <h1>Editar desenvolvedor</h1>
@@ -82,7 +136,7 @@ class CreateDesenvolvedor extends React.Component{
             <div className="col-md-6">
               <div className="form-group">
                 <label>nome:</label>
-                <input type="text" className="form-control" onChange={this.handleChange1} />
+                <input type="text" className="form-control" onChange={this.handleChange1} value={this.state} />
               </div>
             </div>
             </div>
@@ -135,4 +189,4 @@ class CreateDesenvolvedor extends React.Component{
     }
 }
 
-export default CreateDesenvolvedor;
+export default UpdateDesenvolvedor;

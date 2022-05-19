@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,23 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::controller(ApiController::class)->group(function () {
-    Route::prefix('api')->group(function () {
-        Route::get('desenvolvedores', 'getAllDesenvolvedores')->name('desenvolvedores');
-    });
-    //Route::get('/api/desenvolvedores', 'getAllDesenvolvedores');
-    //Route::post('/orders', 'store');
-});*/
+//desenvolvedores
+Route::get('api_getAllDesenvolvedores', 'ApiController@api_getAllDesenvolvedores');
+Route::get('api_getDesenvolvedor/{id}', 'ApiController@api_getDesenvolvedor');
+Route::post('api_createDesenvolvedor', 'ApiController@api_createDesenvolvedor');
+Route::put('api_updateDesenvolvedor/{id}', 'ApiController@api_updateDesenvolvedor');
+Route::delete('api_deleteDesenvolvedor/{id}','ApiController@api_deleteDesenvolvedor');
 
-Route::get('desenvolvedores', 'ApiController@getAllDesenvolvedores');
-Route::get('desenvolvedor/{id}', 'ApiController@getDesenvolvedor');
-Route::post('desenvolvedor', 'ApiController@createDesenvolvedor');
-Route::put('desenvolvedor/{id}', 'ApiController@updateDesenvolvedor');
-Route::delete('desenvolvedor/{id}','ApiController@deleteDesenvolvedor');
-
-
-Route::get('niveis', 'ApiController@getAllNiveis');
-Route::get('nivel/{id}', 'ApiController@getNivel');
-Route::post('nivel', 'ApiController@createNivel');
-Route::put('nivel/{id}', 'ApiController@updateNivel');
-Route::delete('nivel/{id}','ApiController@deleteNivel');
+//Niveis
+Route::get('api_getAllNiveis', 'ApiController@api_getAllNiveis');
+Route::get('api_getNivel/{id}', 'ApiController@api_getNivel');
+Route::post('api_createNivel', 'ApiController@api_createNivel');
+Route::put('api_updateNivel/{id}', 'ApiController@api_updateNivel');
+Route::delete('api_deleteNivel/{id}','ApiController@api_deleteNivel');

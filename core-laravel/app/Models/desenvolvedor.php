@@ -11,6 +11,11 @@ class desenvolvedor extends Model
     protected $table = 'desenvolvedors';
 
     protected $fillable = [
-        'id','nome', 'sexo', 'datanascimento'
+        'nome', 
+        'sexo', 
+        'datanascimento',
+        'idade',
+        'hobby',
+        'nivel',
     ];
 }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import TableRow from './TableRow';
+import TableRowNiveis from './TableRowNiveis';
 import MyGlobleSetting from './MyGlobleSetting';
 
 class DisplayNivel extends React.Component{
@@ -11,9 +11,9 @@ class DisplayNivel extends React.Component{
        
      }
      componentDidMount(){
-       axios.get(MyGlobleSetting.url + '/api/desenvolvedores')
+       axios.get(MyGlobleSetting.url + '/api/api_getAllNiveis')
        .then(response => {
-         this.setState({ products: response.data });
+         this.setState({ niveis: response.data });
        })
        .catch(function (error) {
          console.log(error);
@@ -32,13 +32,13 @@ class DisplayNivel extends React.Component{
   render(){
     return (
       <div>
-        <h1>Desenvolvedores</h1>
+        <h1>Niveis</h1>
 
 
         <div className="row">
-          <div className="col-md-10"></div>
+          <div className="col-md-10"><Link to="/">Desenvolvedores</Link></div>
           <div className="col-md-2">
-            <Link to="/add-item">Create Desenvolvedor</Link>
+            <Link to="/CreateNivel">Incluir Nível</Link>
           </div>
         </div><br />
 
@@ -47,9 +47,8 @@ class DisplayNivel extends React.Component{
             <thead>
             <tr>
                 <td>ID</td>
-                <td>Product Title</td>
-                <td>Product Body</td>
-                <td width="200px">Actions</td>
+                <td>Nivel</td>
+                <td width="200px">Ações</td>
             </tr>
             </thead>
             <tbody>

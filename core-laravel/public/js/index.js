@@ -2175,108 +2175,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/components/App.js":
-/*!****************************************!*\
-  !*** ./resources/js/components/App.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-
-
-
-var App = /*#__PURE__*/function (_Component) {
-  _inherits(App, _Component);
-
-  var _super = _createSuper(App);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(App, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "container",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
-          className: "navbar navbar-default",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "container-fluid",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "navbar-header",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-                className: "navbar-brand",
-                href: "https://gazintech.com",
-                children: "GAZIN TECH"
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
-              className: "nav navbar-nav",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                  to: "/",
-                  children: "Home"
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                  to: "CreateDesenvolvedor",
-                  children: "Incluir Desenvolvedor"
-                })
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                  to: "DisplayDesenvolvedor",
-                  children: "Desenvolvedores"
-                })
-              })]
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          children: this.props.children
-        })]
-      });
-    }
-  }]);
-
-  return App;
-}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
-
-/***/ }),
-
 /***/ "./resources/js/components/CreateDesenvolvedor.js":
 /*!********************************************************!*\
   !*** ./resources/js/components/CreateDesenvolvedor.js ***!
@@ -2568,17 +2466,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var DisplayDesenvolvedor = /*#__PURE__*/function (_Component) {
-  _inherits(DisplayDesenvolvedor, _Component);
+var DisplayDesenvolvedor = /*#__PURE__*/function (_React$Component) {
+  _inherits(DisplayDesenvolvedor, _React$Component);
 
   var _super = _createSuper(DisplayDesenvolvedor);
 
-  function DisplayDesenvolvedor() {
+  function DisplayDesenvolvedor(props) {
     var _this;
 
     _classCallCheck(this, DisplayDesenvolvedor);
 
-    _this = _super.call(this);
+    _this = _super.call(this, props);
     _this.state = {
       value: '',
       desenvolvedores: ''
@@ -2591,7 +2489,7 @@ var DisplayDesenvolvedor = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_3__["default"].url + '/api/desenvolvedores').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_3__["default"].url + '/api/api_getAllDesenvolvedores').then(function (response) {
         _this2.setState({
           desenvolvedores: response.data
         });
@@ -2604,6 +2502,7 @@ var DisplayDesenvolvedor = /*#__PURE__*/function (_Component) {
     value: function tabRow() {
       if (this.state.desenvolvedores instanceof Array) {
         return this.state.desenvolvedores.map(function (object, i) {
+          console.log(object);
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_TableRow__WEBPACK_IMPORTED_MODULE_2__["default"], {
             desenvolvedor: object
           }, i);
@@ -2621,7 +2520,7 @@ var DisplayDesenvolvedor = /*#__PURE__*/function (_Component) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: "col-md-10",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-              to: "/createDesenvolvedor",
+              to: "/displayNivel",
               children: "Niveis"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
@@ -2680,7 +2579,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
-/* harmony import */ var _TableRow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableRow */ "./resources/js/components/TableRow.js");
+/* harmony import */ var _TableRowNiveis__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TableRowNiveis */ "./resources/js/components/TableRowNiveis.js");
 /* harmony import */ var _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./MyGlobleSetting */ "./resources/js/components/MyGlobleSetting.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -2729,9 +2628,9 @@ var DisplayNivel = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this = this;
 
-      axios__WEBPACK_IMPORTED_MODULE_1___default().get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_3__["default"].url + '/api/desenvolvedores').then(function (response) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_3__["default"].url + '/api/api_getAllNiveis').then(function (response) {
         _this.setState({
-          products: response.data
+          niveis: response.data
         });
       })["catch"](function (error) {
         console.log(error);
@@ -2751,16 +2650,20 @@ var DisplayNivel = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
-          children: "Desenvolvedores"
+          children: "Niveis"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
           className: "row",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-            className: "col-md-10"
+            className: "col-md-10",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              to: "/",
+              children: "Desenvolvedores"
+            })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
             className: "col-md-2",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-              to: "/add-item",
-              children: "Create Desenvolvedor"
+              to: "/CreateNivel",
+              children: "Incluir N\xEDvel"
             })
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("table", {
@@ -2770,12 +2673,10 @@ var DisplayNivel = /*#__PURE__*/function (_React$Component) {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                 children: "ID"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-                children: "Product Title"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
-                children: "Product Body"
+                children: "Nivel"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("td", {
                 width: "200px",
-                children: "Actions"
+                children: "A\xE7\xF5es"
               })]
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("tbody", {
@@ -2790,6 +2691,109 @@ var DisplayNivel = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DisplayNivel);
+
+/***/ }),
+
+/***/ "./resources/js/components/Master.js":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Master.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+var Master = /*#__PURE__*/function (_React$Component) {
+  _inherits(Master, _React$Component);
+
+  var _super = _createSuper(Master);
+
+  function Master() {
+    _classCallCheck(this, Master);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Master, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("nav", {
+          className: "navbar navbar-default",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "container-fluid",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "navbar-header",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+                className: "navbar-brand",
+                href: "https://gazintech.com",
+                children: "GAZIN TECH"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
+              className: "nav navbar-nav",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                  to: "/",
+                  children: "Home"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                  to: "CreateDesenvolvedor",
+                  children: "Incluir Desenvolvedor"
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Link, {
+                  to: "DisplayDesenvolvedor",
+                  children: "Desenvolvedores"
+                })
+              })]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "App",
+          children: this.props.children
+        })]
+      });
+    }
+  }]);
+
+  return Master;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Master);
 
 /***/ }),
 
@@ -2864,17 +2868,17 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var TableRow = /*#__PURE__*/function (_Component) {
-  _inherits(TableRow, _Component);
+var TableRow = /*#__PURE__*/function (_React$Component) {
+  _inherits(TableRow, _React$Component);
 
   var _super = _createSuper(TableRow);
 
-  function TableRow() {
+  function TableRow(props) {
     var _this;
 
     _classCallCheck(this, TableRow);
 
-    _this = _super.call(this);
+    _this = _super.call(this, props);
     _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
@@ -2883,37 +2887,37 @@ var TableRow = /*#__PURE__*/function (_Component) {
     key: "handleSubmit",
     value: function handleSubmit(event) {
       event.preventDefault();
-      var uri = _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + "/api/desenvolvedores/".concat(this.props.obj.id);
+      var uri = _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + "/api/api_deleteDesenvolvedor/".concat(this.props.obj.id);
       var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
       axios["delete"](uri);
-      history('/display-item');
+      history('/DisplayDesenvolvedor');
     }
   }, {
     key: "render",
     value: function render() {
-      var desenvolvedor = this.props.desenvolvedor;
+      //const desenvolvedor = this.props.desenvolvedor;
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("tr", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          children: desenvolvedor.id
+          children: this.props.desenvolvedor.id
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          children: desenvolvedor.nome
+          children: this.props.desenvolvedor.nome
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          children: desenvolvedor.nivel
+          children: this.props.desenvolvedor.nivel
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          children: desenvolvedor.sexo
+          children: this.props.desenvolvedor.sexo
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-          children: desenvolvedor.datanascimento
+          children: this.props.desenvolvedor.datanascimento
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
             onSubmit: this.handleSubmit,
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-              to: "updateDesenvolvedor/" + desenvolvedor.id,
+              to: "updateDesenvolvedor/" + this.props.desenvolvedor.id,
               className: "btn btn-primary",
               children: "Editar"
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-              to: "deleteDesenvolvedor/" + desenvolvedor.id,
-              className: "btn btn-primary",
-              children: "Editar"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "submit",
+              value: "Delete",
+              className: "btn btn-danger"
             })]
           })
         })]
@@ -2925,6 +2929,108 @@ var TableRow = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TableRow);
+
+/***/ }),
+
+/***/ "./resources/js/components/TableRowNiveis.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/TableRowNiveis.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
+/* harmony import */ var _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MyGlobleSetting */ "./resources/js/components/MyGlobleSetting.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+var TableRowNiveis = /*#__PURE__*/function (_React$Component) {
+  _inherits(TableRowNiveis, _React$Component);
+
+  var _super = _createSuper(TableRowNiveis);
+
+  function TableRowNiveis() {
+    var _this;
+
+    _classCallCheck(this, TableRowNiveis);
+
+    _this = _super.call(this);
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(TableRowNiveis, [{
+    key: "handleSubmit",
+    value: function handleSubmit(event) {
+      event.preventDefault();
+      var uri = _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + "/api/api_getAllNiveis/".concat(this.props.obj.id);
+      var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.useNavigate)();
+      axios["delete"](uri);
+      history('/display-item');
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var nivel = this.props.nivel;
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("tr", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+          children: nivel.id
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+          children: nivel.nivel
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
+            onSubmit: this.handleSubmit,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+              to: "updateNivel/" + nivel.id,
+              className: "btn btn-primary",
+              children: "Editar"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+              to: "deleteNivel/" + nivel.id,
+              className: "btn btn-danger",
+              children: "Excluir"
+            })]
+          })
+        })]
+      });
+    }
+  }]);
+
+  return TableRowNiveis;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TableRowNiveis);
 
 /***/ }),
 
@@ -2971,24 +3077,21 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
-var CreateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
-  _inherits(CreateDesenvolvedor, _React$Component);
 
-  var _super = _createSuper(CreateDesenvolvedor);
 
-  function CreateDesenvolvedor(props) {
+var UpdateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
+  _inherits(UpdateDesenvolvedor, _React$Component);
+
+  var _super = _createSuper(UpdateDesenvolvedor);
+
+  function UpdateDesenvolvedor(props) {
     var _this;
 
-    _classCallCheck(this, CreateDesenvolvedor);
+    _classCallCheck(this, UpdateDesenvolvedor);
 
     _this = _super.call(this, props);
     _this.state = {
-      nome: '',
-      nivel: '',
-      datanascimento: '',
-      sexo: '',
-      idade: '',
-      hobby: ''
+      id: ''
     };
     _this.handleChange1 = _this.handleChange1.bind(_assertThisInitialized(_this));
     _this.handleChange2 = _this.handleChange2.bind(_assertThisInitialized(_this));
@@ -3000,18 +3103,76 @@ var CreateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
     return _this;
   }
 
-  _createClass(CreateDesenvolvedor, [{
+  _createClass(UpdateDesenvolvedor, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      var _this2 = this;
+      var _this$props,
+          _this$props$match,
+          _this$props$match$par,
+          _this2 = this;
 
-      axios.get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + '/api/desenvolvedor/${id}').then(function (response) {
-        _this2.setState({
-          desenvolvedor: response.data
+      if ((_this$props = this.props) !== null && _this$props !== void 0 && (_this$props$match = _this$props.match) !== null && _this$props$match !== void 0 && (_this$props$match$par = _this$props$match.params) !== null && _this$props$match$par !== void 0 && _this$props$match$par.id) {
+        var id = this.props.match.params.id;
+        console.log('entrou params');
+        axios.get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + "/api/api_getDesenvolvedor/".concat(id)).then(function (response) {
+          _this2.setState({
+            desenvolvedor: response.data
+          });
+
+          console.log(_this2.state);
+        })["catch"](function (error) {
+          console.log(error);
         });
-      })["catch"](function (error) {
-        console.log(error);
-      });
+      } else {
+        var _this$props2, _this$props2$match, _this$props2$match$ob;
+
+        console.log('nao tem id params');
+
+        if ((_this$props2 = this.props) !== null && _this$props2 !== void 0 && (_this$props2$match = _this$props2.match) !== null && _this$props2$match !== void 0 && (_this$props2$match$ob = _this$props2$match.obj) !== null && _this$props2$match$ob !== void 0 && _this$props2$match$ob.id) {
+          var _id = this.props.match.params.id;
+          console.log('entrou obj');
+          axios.get(_MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + "/api/api_getDesenvolvedor/".concat(_id)).then(function (response) {
+            _this2.setState({
+              desenvolvedor: response.data
+            });
+
+            console.log(_this2.state);
+          })["catch"](function (error) {
+            console.log(error);
+          });
+        } else {
+          console.log('nao tem id obj');
+        } //let uri = MyGlobleSetting.url + `/api/desenvolvedores/${this.props.obj.id}`;
+        //console.log(uri);
+
+      }
+    }
+  }, {
+    key: "pegaId",
+    value: function pegaId() {
+      var _this$props3, _this$props3$match, _this$props3$match$pa;
+
+      if ((_this$props3 = this.props) !== null && _this$props3 !== void 0 && (_this$props3$match = _this$props3.match) !== null && _this$props3$match !== void 0 && (_this$props3$match$pa = _this$props3$match.params) !== null && _this$props3$match$pa !== void 0 && _this$props3$match$pa.id) {
+        var id = this.props.match.params.id;
+        this.setState({
+          id: id
+        });
+        console.log(this.state);
+      } else {
+        var _this$props4, _this$props4$match, _this$props4$match$ob;
+
+        console.log('nao tem id params');
+
+        if ((_this$props4 = this.props) !== null && _this$props4 !== void 0 && (_this$props4$match = _this$props4.match) !== null && _this$props4$match !== void 0 && (_this$props4$match$ob = _this$props4$match.obj) !== null && _this$props4$match$ob !== void 0 && _this$props4$match$ob.id) {
+          var _id2 = this.props.match.params.id;
+          this.setState({
+            id: _id2
+          });
+          console.log(this.state);
+        } else {
+          console.log('nao tem id obj');
+        }
+      }
     }
   }, {
     key: "handleChange1",
@@ -3067,7 +3228,7 @@ var CreateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
         datanascimento: this.state.datanascimento,
         idade: this.state.idade
       };
-      var uri = _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + '/api/updateDesenvolvedor';
+      var uri = _MyGlobleSetting__WEBPACK_IMPORTED_MODULE_1__["default"].url + '/api/api_updateDesenvolvedor';
       axios.post(uri, desenvolvedor).then(function (response) {
         (0,react_router_dom__WEBPACK_IMPORTED_MODULE_3__.BrowserRouter)('/displayDesenvolvedores');
       });
@@ -3075,6 +3236,8 @@ var CreateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
+      //const desenvolvedor = this.props.desenvolvedor;
+      this.pegaId();
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
           children: "Editar desenvolvedor"
@@ -3091,7 +3254,8 @@ var CreateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                   type: "text",
                   className: "form-control",
-                  onChange: this.handleChange1
+                  onChange: this.handleChange1,
+                  value: this.state
                 })]
               })
             })
@@ -3177,10 +3341,10 @@ var CreateDesenvolvedor = /*#__PURE__*/function (_React$Component) {
     }
   }]);
 
-  return CreateDesenvolvedor;
+  return UpdateDesenvolvedor;
 }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CreateDesenvolvedor);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UpdateDesenvolvedor);
 
 /***/ }),
 
@@ -3196,7 +3360,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _components_App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/App */ "./resources/js/components/App.js");
+/* harmony import */ var _components_Master__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Master */ "./resources/js/components/Master.js");
 /* harmony import */ var _components_CreateDesenvolvedor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/CreateDesenvolvedor */ "./resources/js/components/CreateDesenvolvedor.js");
 /* harmony import */ var _components_DisplayDesenvolvedor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/DisplayDesenvolvedor */ "./resources/js/components/DisplayDesenvolvedor.js");
 /* harmony import */ var _components_UpdateDesenvolvedor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/UpdateDesenvolvedor */ "./resources/js/components/UpdateDesenvolvedor.js");

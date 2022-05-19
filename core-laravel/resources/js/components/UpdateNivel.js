@@ -1,10 +1,16 @@
 import React, {Component} from 'react';
 import { BrowserRouter } from "react-router-dom";
 import MyGlobleSetting from './MyGlobleSetting';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 
-class CreateDesenvolvedor extends React.Component{
+class UpdateNivel extends React.Component{
+  
     constructor(props) {
+    console.log('constructor');
       super(props);
+      console.log(props);
+      const {id} = useParams();
+      console.log(id);
       this.state = {nome: '', nivel: '', datanascimento: '',sexo: '',idade: '', hobby: '', };
       this.handleChange1 = this.handleChange1.bind(this);
       this.handleChange2 = this.handleChange2.bind(this);
@@ -13,7 +19,17 @@ class CreateDesenvolvedor extends React.Component{
       this.handleChange5 = this.handleChange5.bind(this);
       this.handleChange6 = this.handleChange6.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      
   }  
+  componentDidMount(){
+    axios.get(MyGlobleSetting.url + '/api/api_getNivel/${this.state.id}')
+    .then(response => {
+      this.setState({ desenvolvedor: response.data });
+    })
+    .catch(function (error) {
+      console.log(error);
+    })
+  }
   handleChange1(e){
     this.setState({
       nome: e.target.value
@@ -56,7 +72,7 @@ class CreateDesenvolvedor extends React.Component{
       idade: this.state.idade
     }
 
-    let uri = MyGlobleSetting.url + '/api/createDesenvolvedor';
+    let uri = MyGlobleSetting.url + '/api/updateDesenvolvedor';
     axios.post(uri, desenvolvedor).then((response) => {
       BrowserRouter('/displayDesenvolvedores');
     });
@@ -66,7 +82,7 @@ class CreateDesenvolvedor extends React.Component{
     render() {
       return (
       <div>
-        <h1>Incluir desenvolvedor</h1>
+        <h1>Editar desenvolvedor</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="col-md-6">
@@ -125,4 +141,4 @@ class CreateDesenvolvedor extends React.Component{
     }
 }
 
-export default CreateDesenvolvedor;
+export default UpdateNivel;

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 
-class App extends Component {
+class Master extends React.Component {
   render(){
     return (
       <div className="container">
@@ -18,7 +18,7 @@ class App extends Component {
             </ul>
           </div>
       </nav>
-          <div>
+          <div className='App'>
               {this.props.children}
           </div>
       </div>
@@ -26,4 +26,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Master;
