@@ -11,18 +11,18 @@ Construção de API
 Foi feita uma API em laravel com as todos os endpoints solicitados:
 
 //desenvolvedores
-get  https://teste-gazin.herokuapp.com/api/api_getAllDesenvolvedores
-get  https://teste-gazin.herokuapp.com/api/api_getDesenvolvedor
-post https://teste-gazin.herokuapp.com/api/api_createDesenvolvedor
-delete https://teste-gazin.herokuapp.com/api/api_deleteDesenvolvedor
-put https://teste-gazin.herokuapp.com/api/api_updateDesenvolvedor
+get  https://teste-gazin.herokuapp.com/api/api_getAllDesenvolvedores <br/>
+get  https://teste-gazin.herokuapp.com/api/api_getDesenvolvedor<br/>
+post https://teste-gazin.herokuapp.com/api/api_createDesenvolvedor<br/>
+delete https://teste-gazin.herokuapp.com/api/api_deleteDesenvolvedor<br/>
+put https://teste-gazin.herokuapp.com/api/api_updateDesenvolvedor<br/>
 
 //Niveis
-get  https://teste-gazin.herokuapp.com/api/api_getAllNiveis
-get  https://teste-gazin.herokuapp.com/api/api_getNivel
-post https://teste-gazin.herokuapp.com/api/api_createNivel
-delete https://teste-gazin.herokuapp.com/api/api_deleteNivel
-put https://teste-gazin.herokuapp.com/api/api_updateNivel
+get  https://teste-gazin.herokuapp.com/api/api_getAllNiveis<br/>
+get  https://teste-gazin.herokuapp.com/api/api_getNivel<br/>
+post https://teste-gazin.herokuapp.com/api/api_createNivel<br/>
+delete https://teste-gazin.herokuapp.com/api/api_deleteNivel<br/>
+put https://teste-gazin.herokuapp.com/api/api_updateNivel<br/>
 
 
 Crieis as model, migrate, apicontroller em laravel
