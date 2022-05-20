@@ -10,14 +10,14 @@ Construção de API
 
 Foi feita uma API em laravel com as todos os endpoints solicitados:
 
-//desenvolvedores
+//desenvolvedores<br/>
 get  https://teste-gazin.herokuapp.com/api/api_getAllDesenvolvedores <br/>
 get  https://teste-gazin.herokuapp.com/api/api_getDesenvolvedor<br/>
 post https://teste-gazin.herokuapp.com/api/api_createDesenvolvedor<br/>
 delete https://teste-gazin.herokuapp.com/api/api_deleteDesenvolvedor<br/>
 put https://teste-gazin.herokuapp.com/api/api_updateDesenvolvedor<br/>
 
-//Niveis
+//Niveis<br/>
 get  https://teste-gazin.herokuapp.com/api/api_getAllNiveis<br/>
 get  https://teste-gazin.herokuapp.com/api/api_getNivel<br/>
 post https://teste-gazin.herokuapp.com/api/api_createNivel<br/>
@@ -31,6 +31,6 @@ O frontend foi feito com componentes react exibindo os dados e operações crud 
 
 Utilizei o github para gerenciar
 Disponibilizado no heroku
-
-REPO GITHUB = https://github.com/wpatriota/Fullstack-gazin
+<br/>
+REPO GITHUB = https://github.com/wpatriota/Fullstack-gazin<br/>
 URL HEROKU = http://teste-gazin.herokuapp.com/
