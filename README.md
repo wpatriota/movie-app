@@ -6,9 +6,9 @@ Laravel
 React
 Mysql
 
-Construção de API
+* Foi criado uma base de dados mysql no heroku para armazenar os dados<br/>
 
-Foi feita uma API em laravel com as todos os endpoints solicitados:
+* Implementada uma API em laravel com as todos os endpoints solicitados:
 
 //desenvolvedores<br/>
 get  https://teste-gazin.herokuapp.com/api/api_getAllDesenvolvedores <br/>
@@ -24,13 +24,13 @@ post https://teste-gazin.herokuapp.com/api/api_createNivel<br/>
 delete https://teste-gazin.herokuapp.com/api/api_deleteNivel<br/>
 put https://teste-gazin.herokuapp.com/api/api_updateNivel<br/>
 
+* Utilizei o laravel para criar as model, migration, apicontroller e outras funções. <br/>
 
-Crieis as model, migrate, apicontroller em laravel
+O frontend foi feito em react consumindo a API e exibindo em single page<br/>
 
-O frontend foi feito com componentes react exibindo os dados e operações crud consumindo a API
+* Utilizei o github para gerenciar
+* Disponibilizado no heroku
 
-Utilizei o github para gerenciar
-Disponibilizado no heroku
 <br/>
 REPO GITHUB = https://github.com/wpatriota/Fullstack-gazin<br/>
 URL HEROKU = http://teste-gazin.herokuapp.com/
