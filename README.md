@@ -9,19 +9,21 @@ Mysql
 Construção de API
 
 Foi feita uma API em laravel com as todos os endpoints solicitados:
+
 //desenvolvedores
-Route::get('api_getAllDesenvolvedores', 'ApiController@api_getAllDesenvolvedores');
-Route::get('api_getDesenvolvedor/{id}', 'ApiController@api_getDesenvolvedor');
-Route::post('api_createDesenvolvedor', 'ApiController@api_createDesenvolvedor');
-Route::put('api_updateDesenvolvedor/{id}', 'ApiController@api_updateDesenvolvedor');
-Route::delete('api_deleteDesenvolvedor/{id}','ApiController@api_deleteDesenvolvedor');
+get  https://teste-gazin.herokuapp.com/api/api_getAllDesenvolvedores
+get  https://teste-gazin.herokuapp.com/api/api_getDesenvolvedor
+post https://teste-gazin.herokuapp.com/api/api_createDesenvolvedor
+delete https://teste-gazin.herokuapp.com/api/api_deleteDesenvolvedor
+put https://teste-gazin.herokuapp.com/api/api_updateDesenvolvedor
 
 //Niveis
-Route::get('api_getAllNiveis', 'ApiController@api_getAllNiveis');
-Route::get('api_getNivel/{id}', 'ApiController@api_getNivel');
-Route::post('api_createNivel', 'ApiController@api_createNivel');
-Route::put('api_updateNivel/{id}', 'ApiController@api_updateNivel');
-Route::delete('api_deleteNivel/{id}','ApiController@api_deleteNivel');
+get  https://teste-gazin.herokuapp.com/api/api_getAllNiveis
+get  https://teste-gazin.herokuapp.com/api/api_getNivel
+post https://teste-gazin.herokuapp.com/api/api_createNivel
+delete https://teste-gazin.herokuapp.com/api/api_deleteNivel
+put https://teste-gazin.herokuapp.com/api/api_updateNivel
+
 
 Crieis as model, migrate, apicontroller em laravel
 
