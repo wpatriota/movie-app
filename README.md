@@ -1,4 +1,8 @@
-# Fullstack-gazin
+<a href="https://github.com/wpatriota/Crud-Laravel-React/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/wpatriota/Crud-Laravel-React"></a>
+<a href="https://github.com/wpatriota/Crud-Laravel-React/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/wpatriota/Crud-Laravel-React"></a>
+<a href="https://github.com/wpatriota/Crud-Laravel-React/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/wpatriota/Crud-Laravel-React"></a>
+<a href="https://github.com/wpatriota/Crud-Laravel-React"><img alt="GitHub license" src="https://img.shields.io/github/license/wpatriota/Crud-Laravel-React"></a>
+<br />
 Este é o teste de avaliação para o ingresso de novos desenvolvedores junto a Gazin&lt;Tech>
 
 Tecnologias Utilizadas:
